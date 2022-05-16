@@ -1,31 +1,24 @@
 <template>
-  <NuxtLayout name="default">
-    <template #one>
-      <div class="">
-        <div><h1>Index Page</h1></div>
-        <div>
-          <NuxtLink to="/demo1">Demo1 Page</NuxtLink> <br />
-          <NuxtLink to="/demo3">Demo3 Page</NuxtLink> <br />
-          <NuxtLink to="/demo4">Demo4 Page</NuxtLink> <br />
-          <NuxtLink to="/demo5">Demo5 Page</NuxtLink> <br />
-          <NuxtLink to="/demo6">Demo6 Page</NuxtLink> <br />
-          <NuxtLink to="/demo7">Demo7 Page</NuxtLink> <br />
-          <NuxtLink to="/goods-testGoods/demo2-10086">Demo2 Page</NuxtLink> <br />
-          <NuxtLink to="/parent/child">/parent/child</NuxtLink> <br />
-          <NuxtLink to="/parent/two">/parent/two</NuxtLink>
-        </div>
-      </div>
-    </template>
-    <template #two>
-      <div>我是two中的内容</div>
-      <TheFooter />
-      <TestMyButton />
-    </template>
-  </NuxtLayout>
+  <div>
+    <v-card class="mx-auto" max-width="300">
+      <v-list disabled>
+        <v-list-subheader>REPORTS</v-list-subheader>
+        <v-list-item v-for="(item, i) in items" :key="i">
+          <v-list-item-avatar start>
+            <v-icon :icon="item.icon"></v-icon>
+          </v-list-item-avatar>
+          <v-list-item-title v-text="item.text"></v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-card>
+  </div>
 </template>
 
-<script setup lang="ts">
-import {} from "vue";
+<script setup lang="ts" >
+const selectedItem = ref(1);
+const items = ref([
+  { text: "Real-Time", icon: "mdi-clock" },
+  { text: "Audience", icon: "mdi-account" },
+  { text: "Conversions", icon: "mdi-flag" },
+]);
 </script>
-
-<style scoped></style>
