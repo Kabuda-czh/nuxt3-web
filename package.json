@@ -7,6 +7,18 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.3"
+    "@pinia/nuxt": "^0.1.9",
+    "autoprefixer": "^10.4.7",
+    "nuxt": "3.0.0-rc.3",
+    "prettier": "^2.6.2",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0"
+  },
+  "dependencies": {
+    "@mdi/font": "^6.6.96",
+    "axios": "^0.27.2",
+    "highlight.js": "^11.5.1",
+    "pinia": "^2.0.14",
+    "vuetify": "3.0.0-beta.1"
   }
 }
